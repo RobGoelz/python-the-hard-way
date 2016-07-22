@@ -17,6 +17,6 @@ print "The script is called:", script
 # prints the "first" variable assigned from argv
 print "The first variable is:", first
 # prints the "second" variable assigned from argv
-print "The second variable is:," second
+print "The second variable is:", second
 # prints the "third" variable assigned from argv
 print "The third varaible is:," third
