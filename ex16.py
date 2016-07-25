@@ -36,22 +36,14 @@ line1 = raw_input ("line 1: ")
 line2 = raw_input ("line 2: ")
 # takes raw_input and assigns it to varaible line3
 line3 = raw_input ("line 3: ")
+# assigns all lines to one variable with end lines
+all_lines = "%s\n%s\n%s\n" % (line1, line2, line3)
 
 # prints string
 print "I'm going to write these to the file"
 
 # writes line1 variable out to the file
-target.write(line1)
-# end of line character, moves to new line
-target.write("\n")
-# writes line2 variable out to the file
-target.write(line2)
-# end of line character, moves to new line
-target.write("\n")
-# writes line3 variable out to the file
-target.write(line3)
-# end of line character, moves to new line
-target.write("\n")
+target.write(all_lines)
 
 # prints string
 print "And finally, we close the file."
