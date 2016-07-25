@@ -14,6 +14,8 @@ print "Here's your file %r:" % filename
 # prints the contents of the text variable by passing it to 
 # the read function "read()"
 print txt.read()
+# closes file
+txt.close()
 
 # prints string to prompt for filename
 print "Type the filename again:"
@@ -30,3 +32,5 @@ txt_again = open(file_again)
 # prints the contents of the txt_again variable by passing it 
 # to the read function "read()"
 print txt_again.read()
+# closes file
+txt_again.close()
