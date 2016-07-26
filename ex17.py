@@ -14,14 +14,11 @@ script, from_file, to_file = argv
 # python format operator for strings (%s)
 print "Copying from %s to %s" % (from_file, to_file)
 
-# we could do these two on one line, how?
 # opens the file represented by the from_file varaible
 # which is the second command line argument above
+# reads file using the pass (.) to the read() function
 # and assigns it to the in_file variable
-in_file = open (from_file)
-# reads the contents of the file stored in the in_file
-# variable into a new variable called indata
-indata = in_file.read()
+indata = open(from_file).read()
 
 # prints the string and uses the python format operator
 # for decimals to call in the length of the indata
@@ -32,7 +29,8 @@ print "The input file is %d bytes long" % len(indata)
 # for raw input (printable object representation) (%r)
 # to call in the evaluation of the existence of a file
 # using the exists command imported at the top of this
-# script
+# script, then returns "True" if file exists
+# or "False" if the file does not exist
 print "Does the output file exist? %r" % exists(to_file)
 
 # prints string
@@ -40,18 +38,11 @@ print "Ready, hit RETURN to continue, CTRL-C (^C) to abort."
 # waits for input
 raw_input()
 
-# opens the file to_file for writing and assigns it to a
-# new variable called out_file
-out_file = open (to_file, 'w')
-# writes the contents of the indata variable, which
-# remember is the content of the from_file file above
-# and then writes the data out to the out_file variable
-# which is really the to_file file variable called above
-out_file.write(indata)
+# opens the file to_file for writing and passes it (.)
+# to write, and writes to the file using the data in 
+# the indata variable from above
+open (to_file, 'w').write(indata)
 
 # prints string
 print "Alright, all done."
 
-# closes all files
-out_file.close()
-in_file.close()
